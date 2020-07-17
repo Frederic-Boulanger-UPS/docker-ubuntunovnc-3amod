@@ -109,6 +109,14 @@ Plugin {
   }
 }
 Plugin {
+  type=launchbar
+  Config {
+    Button {
+      id=KillSession.desktop
+    }
+  }
+}
+Plugin {
   type=cpu
   Config {
   }
