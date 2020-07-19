@@ -1,5 +1,6 @@
 #!/bin/sh
-REPO=fredblgr/ubuntunovnc-3amod
+REPO=fredblgr/
+IMAGE=ubuntunovnc-3amod
 TAG=2020
 URL=http://localhost:6080
 
@@ -8,16 +9,18 @@ docker run --rm -d \
 		  -v ${PWD}:/workspace:rw \
 		  -e USER=student -e PASSWORD=CS3ASL \
 		  -e RESOLUTION=1680x1050 \
-		  --name ubuntunovnc-3amod-run \
-		  ${REPO}:${TAG}
+		  --name ${IMAGE}-run \
+		  ${REPO}${IMAGE}:${TAG}
 sleep 5
-if command -v open >& /dev/null
+
+if command -v open 2>&1 /dev/null
 then
+  echo "Found 'open' command"
   open ${URL}
-elif command -v xdg-open >& /dev/null
+elif command -v xdg-open2 2>&1 /dev/null
 then
-  # xdg-open can be configured, for instance with "xdg-settings set default-web-browser firefox.desktop"
-  xdg-open ${URL}
+  xdg-open "${URL}"
 else
   echo "# Point your browser at ${URL}"
+  echo "You may install xdg-utils so that I can do that for you."
 fi
