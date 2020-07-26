@@ -7,7 +7,7 @@ Available on [Docker hub](https://hub.docker.com/r/fredblgr/ubuntunovnc-3amod)
 
 Based on the work by [Doro Wu](https://github.com/fcwu), see on [Docker](https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/)
 
-This image contains Isabelle 2020, the Coq IDE, Why3 with various solvers and Eclipse Modeling 2020-06
+This image contains Isabelle 2019, the Coq IDE, Why3 with various solvers and Eclipse Modeling 2020-06
 
 The source files are available on [GitHub](https://github.com/Frederic-Boulanger-UPS/docker-ubuntunovnc-3amod). The missing eclipse modeling archive (too big for GitHub) is the resources directory is replaced by a file containing an URL from which it can be downloaded.
 

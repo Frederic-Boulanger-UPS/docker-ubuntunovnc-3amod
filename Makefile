@@ -14,7 +14,7 @@ run:
 		-e USER=student -e PASSWORD=CS3ASL \
 		-e RESOLUTION=1680x1050 \
 		--name $(IMAGE)-test \
-		$(REPO):$(TAG)
+		$(REPO)$(IMAGE):$(TAG)
 	sleep 5
 	open -a firefox http://localhost:6080
 
@@ -24,7 +24,7 @@ runasroot:
 		-v ${PWD}:/workspace:rw \
 		-e RESOLUTION=1680x1050 \
 		--name $(IMAGE)-test \
-		$(REPO):$(TAG)
+		$(REPO)$(IMAGE):$(TAG)
 	sleep 5
 	open -a firefox http://localhost:6080
 
