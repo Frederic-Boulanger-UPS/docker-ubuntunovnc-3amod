@@ -4,6 +4,8 @@ FROM fredblgr/ubuntunovnc-3asem:2019
 # Install xdg-utils because Eclipse uses it
 RUN apt-get update -y && apt-get install xdg-utils -y
 
+RUN apt autoremove && apt autoclean
+
 # Install Eclipse Modeling 2020-06
 # Copy existing configuration containing:
 # * Eclipse Modeling 2020-06
